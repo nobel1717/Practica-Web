@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Libre Baskerville', serif;
+}
+body {
+    background: grey;
+    color: black;
+}
+
+.contenedor{
+    background-color: rgb(140, 212, 212);
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    border-radius: 7px;
+    grid-template-areas: "header header header"
+                         "contenido contenido contenido"
+                         "footer footer footer";
+}
+
+.contenedor > div,
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .footer {
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.contenedor .header{
+    background: url(https://cdn.pixabay.com/photo/2018/01/24/18/05/background-3104413_960_720.jpg);
+    background-size: 100% 100%;
+    color: #fff;
+    grid-area: header;
+}
+img{
+    size: 100%;
+    max-width:100%;
+    height:auto;
+}
+.contenedor .contenido {
+    grid-area: contenido;
+    background: transparent 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+
+.contenedor .footer {
+    background: url(https://cdn.pixabay.com/photo/2017/04/06/17/43/water-2208931_960_720.jpg);
+    background-size: 100%;
+    grid-area: footer;
+    color: #fff;
+}
+
+@media screen and (max-width: 760px){
+    .contenedor {
+        grid-template-areas: "header header header"
+                         "contenido contenido contenido"
+                         "footer footer footer";
+    }
+    
+}
+@media screen and (max-width: 370px){
+    *{
+        /*font-size: small;*/
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica Nobel</title>
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="contenedor">
+        <header class="header">
+            <h1>Prácticas de desarrollo IV - Nobel De Gracia</h1>
+        </header>
+        <main class="contenido">
+            <h2>Haga click en la práctica que desea realizar</h2>
+            <div class="accordion accordion-flush">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      Práctica 1
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">En este campo es para la práctica #1  donde se mostrará a la derecha y tendrás que resolver acerca: <br> El cálculo del área de un círculo, solo debe ingresar el valor de r (Radio). <br>
+                        <img src="img/formula-area-circulo.png" width="70%" height="60%" alt="...">
+                        <br> <br><input id="n1" type="text" oninput="limitDecimalPlaces(event, 2)" onkeypress="return isNumberKey(event)" autocomplete="off"  class="form-control" placeholder="Ingrese su valor" aria-label="Username" aria-describedby="addon-wrapping">
+                        <br><button type="button" class="btn btn-success" onclick="area()">Hacer cálculo 1</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      Práctica 2
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">En este campo es para la práctica #2  donde se mostrará a la derecha y tendrás que resolver acerca: <br> El cálculo del perímetro de un círculo, solo debe ingresar el valor de r (Radio). <br> 
+                        <img src="img/perimetro-de-un-circulo-circunferencia.webp" alt="...">
+                        <br><br> <input type="text" id="n2"  autocomplete="off" class="form-control" placeholder="Ingrese su valor" aria-label="Username" aria-describedby="addon-wrapping" oninput="limitDecimalPlaces(event, 2)" onkeypress="return isNumberKey(event)">
+                        <br><button type="button" class="btn btn-success" onclick="perimetro()">Hacer cálculo 2 </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                      Práctica 3
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">En este campo es para la práctica #3  donde se mostrará a la derecha y tendrás que resolver acerca: <br> La secuencia de Fibonacci, solo debe ingresar el N de veces que se ejecute. <br> 
+                        <img src="img/secuencia-de-fibonacci-2.jpg"  alt="...">
+                        <br><br> <input type="text" id="n3"  autocomplete="off" oninput="limitDecimalPlaces(event, 2)" onkeypress="return isNumberKey(event)" class="form-control" placeholder="Ingrese su valor" aria-label="Username" aria-describedby="addon-wrapping">
+                        <br><button type="button" class="btn btn-success" onclick="fibo()">Hacer cálculo 3 </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button  class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                        Práctica 4
+                      </button>
+                    </h2>
+                    <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">En este campo es para la práctica #4  donde se mostrará a la derecha y tendrás que resolver acerca: la X1 y la X2 de la fórmula cuadrática o general, debe ingresar los valores de a, b y c. <br> 
+                        <img src="img/ecuacion-de-segundo-grado-1.jpg" alt="...">
+                        <br> <input type="text" id="n4" class="form-control" autocomplete="off" oninput="limitDecimalPlaces(event, 2)" onkeypress="return isNumberKey(event)" placeholder="Ingrese su valor a" aria-label="Username" aria-describedby="addon-wrapping">
+                        <br> <input type="text" id="n5" class="form-control" autocomplete="off" oninput="limitDecimalPlaces(event, 2)" onkeypress="return isNumberKey(event)" placeholder="Ingrese su valor b" aria-label="Username" aria-describedby="addon-wrapping">
+                        <br> <input type="text" id="n6" class="form-control" autocomplete="off" oninput="limitDecimalPlaces(event, 2)" onkeypress="return isNumberKey(event)" placeholder="Ingrese su valor c" aria-label="Username" aria-describedby="addon-wrapping">
+                        <br>
+                        <button type="button" class="btn btn-success" onclick="ecua()">Hacer cálculo 4 </button>
+                    </div>
+                    </div>
+                  </div>
+              </div>
+        </main>
+        <footer class="footer">
+            <p id="rete3">
+                ¿Será que sobrevivimos al semestre? -- Sí, es responsive
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
